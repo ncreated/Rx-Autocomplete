@@ -1,0 +1,6 @@
+framework module Pods_AutocompleteTests {
+  umbrella header "Pods-AutocompleteTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
