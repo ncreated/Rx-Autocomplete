@@ -9,14 +9,11 @@
 import RxSwift
 
 enum CountryAutocompleteError: Error {
-    case providerNotAvailable
+    case simulatedProviderError
 }
 
 /// Country autocomplete provider that simulates error on every 10 calls.
 final class CountryAutocompleteProvider: AutocompleteProvider {
-
-    /// User for simulating errors
-    private var autocompletionsCount = 0
 
     // MARK: - AutocompleteProvider
 
@@ -32,13 +29,14 @@ final class CountryAutocompleteProvider: AutocompleteProvider {
                 }
         }
 
-        autocompletionsCount = autocompletionsCount + 1
-        let shouldSimulateError = autocompletionsCount % 10 == 0
+        func shouldSimulateErrorFor(prefix: String) -> Bool {
+            return text == "Error"
+        }
 
         return Observable.just(text)
             .map { text in
-                if shouldSimulateError {
-                    throw CountryAutocompleteError.providerNotAvailable
+                if shouldSimulateErrorFor(prefix: text) {
+                    throw CountryAutocompleteError.simulatedProviderError
                 }
 
                 return predictionsFor(prefix: text)
@@ -54,8 +52,8 @@ private let countries = ["Afghanistan", "Albania", "Algeria", "American Samoa", 
 extension CountryAutocompleteError: CustomStringConvertible {
     var description: String {
         switch self {
-        case .providerNotAvailable:
-            return "Ops, provider is offline."
+        case .simulatedProviderError:
+            return "Simulated provider error."
         }
     }
 }
