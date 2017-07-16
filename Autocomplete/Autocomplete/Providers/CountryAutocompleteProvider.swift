@@ -24,7 +24,7 @@ final class CountryAutocompleteProvider: AutocompleteProvider {
         func predictionsFor(prefix: String) -> [Prediction] {
             return countries
                 .flatMap { country in
-                    if let matchingRange = country.range(of: prefix) {
+                    if let matchingRange = country.range(of: prefix, options: .caseInsensitive) {
                         return Prediction(predictedText: country, matchingRange: matchingRange)
                     } else {
                         return nil
