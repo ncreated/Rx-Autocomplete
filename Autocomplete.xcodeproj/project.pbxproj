@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		54708A081F1B611E00F7AA92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54708A071F1B611E00F7AA92 /* AppDelegate.swift */; };
-		54708A0A1F1B611E00F7AA92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54708A091F1B611E00F7AA92 /* ViewController.swift */; };
 		54708A0D1F1B611E00F7AA92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54708A0B1F1B611E00F7AA92 /* Main.storyboard */; };
 		54708A0F1F1B611E00F7AA92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54708A0E1F1B611E00F7AA92 /* Assets.xcassets */; };
 		54708A121F1B611E00F7AA92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54708A101F1B611E00F7AA92 /* LaunchScreen.storyboard */; };
 		54708A1D1F1B611E00F7AA92 /* AutocompleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54708A1C1F1B611E00F7AA92 /* AutocompleteTests.swift */; };
+		548BC25E1F1B659700D5B27D /* Autocomplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548BC2581F1B659700D5B27D /* Autocomplete.swift */; };
+		548BC25F1F1B659700D5B27D /* AutocompleteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548BC2591F1B659700D5B27D /* AutocompleteProvider.swift */; };
+		548BC2601F1B659700D5B27D /* AutocompleteResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548BC25A1F1B659700D5B27D /* AutocompleteResult.swift */; };
+		548BC2611F1B659700D5B27D /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548BC25B1F1B659700D5B27D /* Prediction.swift */; };
+		548BC2621F1B659700D5B27D /* CountryAutocompleteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548BC25D1F1B659700D5B27D /* CountryAutocompleteProvider.swift */; };
+		548BC2651F1B65F400D5B27D /* SearchPredictionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548BC2631F1B65F400D5B27D /* SearchPredictionCell.swift */; };
+		548BC2661F1B65F400D5B27D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548BC2641F1B65F400D5B27D /* SearchViewController.swift */; };
 		7F9450F3B097075C0C98D4CC /* Pods_Autocomplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D571390B339D4A9DDC86C33D /* Pods_Autocomplete.framework */; };
 		B5413AB7A076217A25ECD264 /* Pods_AutocompleteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C55DFA593303C0EEAC6CB92 /* Pods_AutocompleteTests.framework */; };
 /* End PBXBuildFile section */
@@ -31,7 +37,6 @@
 		3C55DFA593303C0EEAC6CB92 /* Pods_AutocompleteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutocompleteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54708A041F1B611E00F7AA92 /* Autocomplete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autocomplete.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54708A071F1B611E00F7AA92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		54708A091F1B611E00F7AA92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		54708A0C1F1B611E00F7AA92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54708A0E1F1B611E00F7AA92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54708A111F1B611E00F7AA92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +44,13 @@
 		54708A181F1B611E00F7AA92 /* AutocompleteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutocompleteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54708A1C1F1B611E00F7AA92 /* AutocompleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteTests.swift; sourceTree = "<group>"; };
 		54708A1E1F1B611E00F7AA92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		548BC2581F1B659700D5B27D /* Autocomplete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Autocomplete.swift; sourceTree = "<group>"; };
+		548BC2591F1B659700D5B27D /* AutocompleteProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocompleteProvider.swift; sourceTree = "<group>"; };
+		548BC25A1F1B659700D5B27D /* AutocompleteResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocompleteResult.swift; sourceTree = "<group>"; };
+		548BC25B1F1B659700D5B27D /* Prediction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prediction.swift; sourceTree = "<group>"; };
+		548BC25D1F1B659700D5B27D /* CountryAutocompleteProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryAutocompleteProvider.swift; sourceTree = "<group>"; };
+		548BC2631F1B65F400D5B27D /* SearchPredictionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPredictionCell.swift; sourceTree = "<group>"; };
+		548BC2641F1B65F400D5B27D /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		60E04EDB3631899DEF785EEE /* Pods-Autocomplete.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Autocomplete.release.xcconfig"; path = "Pods/Target Support Files/Pods-Autocomplete/Pods-Autocomplete.release.xcconfig"; sourceTree = "<group>"; };
 		6CB9457055F98796E86F98B2 /* Pods-AutocompleteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutocompleteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutocompleteTests/Pods-AutocompleteTests.release.xcconfig"; sourceTree = "<group>"; };
 		84B6E679AF96882DDAF19613 /* Pods-AutocompleteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutocompleteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutocompleteTests/Pods-AutocompleteTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,8 +121,10 @@
 		54708A061F1B611E00F7AA92 /* Autocomplete */ = {
 			isa = PBXGroup;
 			children = (
+				548BC2571F1B659700D5B27D /* Autocomplete */,
 				54708A071F1B611E00F7AA92 /* AppDelegate.swift */,
-				54708A091F1B611E00F7AA92 /* ViewController.swift */,
+				548BC2631F1B65F400D5B27D /* SearchPredictionCell.swift */,
+				548BC2641F1B65F400D5B27D /* SearchViewController.swift */,
 				54708A0B1F1B611E00F7AA92 /* Main.storyboard */,
 				54708A0E1F1B611E00F7AA92 /* Assets.xcassets */,
 				54708A101F1B611E00F7AA92 /* LaunchScreen.storyboard */,
@@ -126,6 +140,26 @@
 				54708A1E1F1B611E00F7AA92 /* Info.plist */,
 			);
 			path = AutocompleteTests;
+			sourceTree = "<group>";
+		};
+		548BC2571F1B659700D5B27D /* Autocomplete */ = {
+			isa = PBXGroup;
+			children = (
+				548BC2581F1B659700D5B27D /* Autocomplete.swift */,
+				548BC2591F1B659700D5B27D /* AutocompleteProvider.swift */,
+				548BC25A1F1B659700D5B27D /* AutocompleteResult.swift */,
+				548BC25B1F1B659700D5B27D /* Prediction.swift */,
+				548BC25C1F1B659700D5B27D /* Providers */,
+			);
+			path = Autocomplete;
+			sourceTree = "<group>";
+		};
+		548BC25C1F1B659700D5B27D /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				548BC25D1F1B659700D5B27D /* CountryAutocompleteProvider.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,7 +364,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54708A0A1F1B611E00F7AA92 /* ViewController.swift in Sources */,
+				548BC2601F1B659700D5B27D /* AutocompleteResult.swift in Sources */,
+				548BC2621F1B659700D5B27D /* CountryAutocompleteProvider.swift in Sources */,
+				548BC2661F1B65F400D5B27D /* SearchViewController.swift in Sources */,
+				548BC2611F1B659700D5B27D /* Prediction.swift in Sources */,
+				548BC2651F1B65F400D5B27D /* SearchPredictionCell.swift in Sources */,
+				548BC25E1F1B659700D5B27D /* Autocomplete.swift in Sources */,
+				548BC25F1F1B659700D5B27D /* AutocompleteProvider.swift in Sources */,
 				54708A081F1B611E00F7AA92 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,6 +581,7 @@
 				54708A231F1B611E00F7AA92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		54708A241F1B611E00F7AA92 /* Build configuration list for PBXNativeTarget "AutocompleteTests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +590,7 @@
 				54708A261F1B611E00F7AA92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
