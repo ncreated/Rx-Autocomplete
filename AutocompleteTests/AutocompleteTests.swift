@@ -37,9 +37,9 @@ private final class MockAutocompleteProvider: AutocompleteProvider {
 
 private final class SimulatedInput {
 
-    private let subject = PublishSubject<String?>()
+    private let subject = PublishSubject<String>()
 
-    var text: Observable<String?> { return subject.asObservable() }
+    var text: Observable<String> { return subject.asObservable() }
 
     // MARK: - Simulating
 

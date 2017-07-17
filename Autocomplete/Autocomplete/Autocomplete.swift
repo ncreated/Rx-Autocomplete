@@ -23,14 +23,11 @@ final class Autocomplete {
 
     // MARK: - Public
 
-    func autocomplete(text: Observable<String?>) -> (result: Driver<AutocompleteResult>, isBusy: Driver<Bool>) {
+    func autocomplete(text: Observable<String>) -> (result: Driver<AutocompleteResult>, isBusy: Driver<Bool>) {
         let provider = self.provider
         let isLoadingSubject = PublishSubject<Bool>()
 
-        let query: Observable<String> = text
-            .flatMap { $0.map(Observable.just) ?? Observable.empty() }
-
-        let result: Driver<AutocompleteResult> = query
+        let result: Driver<AutocompleteResult> = text
             .do(onNext: { _ in isLoadingSubject.onNext(true) })
             .flatMapLatest { query -> Observable<AutocompleteResult> in
                 provider

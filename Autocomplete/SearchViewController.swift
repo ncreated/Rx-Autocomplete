@@ -36,7 +36,9 @@ class SearchViewController: UITableViewController {
         }
 
         // Define intput stream
-        let inputText = searchBar.rx.text.asObservable()
+        let inputText = searchBar.rx.text
+            .asObservable()
+            .flatMap { $0.map(Observable.just) ?? Observable.empty() } // .unwrap() if using `RxSwiftExt`
 
         // Create autocomplete streams
         let (results, isLoading) = autocomplete.autocomplete(text: inputText)
